@@ -1,0 +1,106 @@
+[2025-05-25T11:10:54.835Z] INFO: 🚀 CourseCraft API running on http://localhost:5000
+[2025-05-25T11:10:54.836Z] ERROR: 💥 Uncaught Exception
+[2025-05-25T11:10:54.836Z] INFO: 📚 Health check: http://localhost:5000/api/v1/health
+[2025-05-25T11:10:54.845Z] ERROR: 💥 Uncaught Exception
+[2025-05-25T11:10:54.858Z] ERROR: 💥 Uncaught Exception
+[2025-05-25T11:10:54.884Z] ERROR: 💥 Uncaught Exception
+[2025-05-25T11:11:15.543Z] INFO: ::ffff:127.0.0.1 - - [25/May/2025:11:11:15 +0000] "HEAD / HTTP/1.1" 404 140 "http://localhost:5173/dashboard" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0"
+[2025-05-25T11:11:45.535Z] INFO: ::ffff:127.0.0.1 - - [25/May/2025:11:11:45 +0000] "HEAD / HTTP/1.1" 404 140 "http://localhost:5173/dashboard" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0"
+[2025-05-25T11:12:16.223Z] INFO: ::ffff:127.0.0.1 - - [25/May/2025:11:12:16 +0000] "HEAD / HTTP/1.1" 404 140 "http://localhost:5173/dashboard" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0"
+[2025-05-25T11:12:46.230Z] INFO: ::ffff:127.0.0.1 - - [25/May/2025:11:12:46 +0000] "HEAD / HTTP/1.1" 404 140 "http://localhost:5173/dashboard" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0"
+[2025-05-25T11:12:53.485Z] INFO: ::ffff:127.0.0.1 - - [25/May/2025:11:12:53 +0000] "HEAD / HTTP/1.1" 404 140 "http://localhost:5173/dashboard" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0"
+[2025-05-25T11:12:53.488Z] INFO: ::ffff:127.0.0.1 - - [25/May/2025:11:12:53 +0000] "HEAD / HTTP/1.1" 404 140 "http://localhost:5173/dashboard" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0"
+[2025-05-25T11:12:57.696Z] ERROR: 💥 Uncaught Exception
+[2025-05-25T11:13:07.855Z] INFO: ::ffff:127.0.0.1 - - [25/May/2025:11:13:07 +0000] "HEAD / HTTP/1.1" 404 140 "http://localhost:5173/dashboard" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0"
+[2025-05-25T11:13:07.861Z] INFO: ::ffff:127.0.0.1 - - [25/May/2025:11:13:07 +0000] "HEAD / HTTP/1.1" 404 140 "http://localhost:5173/dashboard" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0"
+[2025-05-25T11:15:16.707Z] INFO: 👋 SIGTERM received.
+[2025-05-25T11:15:16.708Z] INFO: 💥 Process terminated.
+[2025-05-25T11:15:21.166Z] INFO: 🚀 CourseCraft API running on http://localhost:5000
+[2025-05-25T11:15:21.168Z] INFO: 📚 Health check: http://localhost:5000/api/v1/health
+[2025-05-25T11:15:22.798Z] ERROR: 💥 Uncaught Exception
+[2025-05-25T11:15:23.087Z] ERROR: 💥 Uncaught Exception
+[2025-05-25T11:15:23.496Z] ERROR: 💥 Uncaught Exception
+[2025-05-25T11:15:23.927Z] ERROR: 💥 Uncaught Exception
+[2025-05-25T11:15:25.138Z] ERROR: 💥 Uncaught Exception
+[2025-05-25T11:16:11.179Z] INFO: 👋 SIGTERM received.
+[2025-05-25T11:16:11.180Z] INFO: 💥 Process terminated.
+[2025-05-25T11:16:17.482Z] INFO: 🚀 CourseCraft API running on http://localhost:5000
+[2025-05-25T11:16:17.485Z] INFO: 📚 Health check: http://localhost:5000/api/v1/health
+[2025-05-25T11:16:17.947Z] ERROR: 💥 Uncaught Exception
+[2025-05-25T11:16:18.083Z] ERROR: 💥 Uncaught Exception
+[2025-05-25T11:16:18.522Z] ERROR: 💥 Uncaught Exception
+[2025-05-25T11:16:19.062Z] ERROR: 💥 Uncaught Exception
+[2025-05-25T11:16:20.028Z] ERROR: 💥 Uncaught Exception
+[2025-05-25T11:16:34.779Z] INFO: 👋 SIGTERM received.
+[2025-05-25T11:16:34.780Z] INFO: 💥 Process terminated.
+[2025-05-25T11:16:39.044Z] INFO: 🚀 CourseCraft API running on http://localhost:5000
+[2025-05-25T11:16:39.046Z] INFO: 📚 Health check: http://localhost:5000/api/v1/health
+[2025-05-25T11:16:39.446Z] ERROR: 💥 Uncaught Exception
+[2025-05-25T11:16:39.742Z] ERROR: 💥 Uncaught Exception
+[2025-05-25T11:16:39.770Z] ERROR: 💥 Uncaught Exception
+[2025-05-25T11:16:41.388Z] ERROR: 💥 Uncaught Exception
+[2025-05-25T11:17:05.220Z] ERROR: 💥 Uncaught Exception
+[2025-05-25T11:17:30.040Z] INFO: 👋 SIGTERM received.
+[2025-05-25T11:17:30.044Z] INFO: 💥 Process terminated.
+[2025-05-25T11:17:36.600Z] INFO: 🚀 CourseCraft API running on http://localhost:5000
+[2025-05-25T11:17:36.602Z] INFO: 📚 Health check: http://localhost:5000/api/v1/health
+[2025-05-25T11:17:38.244Z] ERROR: 💥 Uncaught Exception
+[2025-05-25T11:17:38.263Z] ERROR: 💥 Uncaught Exception
+[2025-05-25T11:17:39.390Z] ERROR: 💥 Uncaught Exception
+[2025-05-25T11:17:39.526Z] ERROR: 💥 Uncaught Exception
+[2025-05-25T11:17:40.622Z] ERROR: 💥 Uncaught Exception
+[2025-05-25T11:20:21.439Z] INFO: 🚀 CourseCraft API running on http://localhost:5000
+[2025-05-25T11:20:21.440Z] INFO: 📚 Health check: http://localhost:5000/api/v1/health
+[2025-05-25T11:20:40.942Z] INFO: ::ffff:127.0.0.1 - - [25/May/2025:11:20:40 +0000] "GET /api/v1/health HTTP/1.1" 200 76 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0"
+[2025-05-25T11:20:41.025Z] INFO: ::ffff:127.0.0.1 - - [25/May/2025:11:20:41 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:5000/api/v1/health" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0"
+[2025-05-25T11:20:48.154Z] INFO: ::ffff:127.0.0.1 - - [25/May/2025:11:20:48 +0000] "GET / HTTP/1.1" 404 139 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0"
+[2025-05-25T11:23:55.593Z] ERROR: 💥 Uncaught Exception
+[2025-05-25T11:47:24.195Z] INFO: 🚀 CourseCraft API running on http://localhost:5000
+[2025-05-25T11:47:24.197Z] INFO: 📚 Health check: http://localhost:5000/api/v1/health
+[2025-05-25T11:47:26.307Z] INFO: ::ffff:127.0.0.1 - - [25/May/2025:11:47:26 +0000] "HEAD / HTTP/1.1" 404 140 "http://localhost:5173/dashboard" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0"
+[2025-05-25T11:47:26.311Z] INFO: ::ffff:127.0.0.1 - - [25/May/2025:11:47:26 +0000] "HEAD / HTTP/1.1" 404 140 "http://localhost:5173/dashboard" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0"
+[2025-05-25T11:47:41.027Z] INFO: ::ffff:127.0.0.1 - - [25/May/2025:11:47:41 +0000] "HEAD / HTTP/1.1" 404 140 "http://localhost:5173/dashboard" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0"
+[2025-05-25T11:47:41.031Z] INFO: ::ffff:127.0.0.1 - - [25/May/2025:11:47:41 +0000] "HEAD / HTTP/1.1" 404 140 "http://localhost:5173/dashboard" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0"
+[2025-05-25T11:48:11.059Z] INFO: ::ffff:127.0.0.1 - - [25/May/2025:11:48:11 +0000] "HEAD / HTTP/1.1" 404 140 "http://localhost:5173/dashboard" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0"
+[2025-05-25T11:48:33.359Z] INFO: 👋 SIGTERM received.
+[2025-05-25T11:48:33.360Z] INFO: 💥 Process terminated.
+[2025-05-25T11:48:42.770Z] INFO: 🚀 CourseCraft API running on http://localhost:5000
+[2025-05-25T11:48:42.772Z] ERROR: 💥 Uncaught Exception
+[2025-05-25T11:48:42.774Z] INFO: 📚 Health check: http://localhost:5000/api/v1/health
+[2025-05-25T11:48:42.835Z] ERROR: 💥 Uncaught Exception
+[2025-05-25T11:48:42.949Z] ERROR: 💥 Uncaught Exception
+[2025-05-25T11:48:42.945Z] ERROR: 💥 Uncaught Exception
+[2025-05-25T11:48:44.057Z] ERROR: 💥 Uncaught Exception
+[2025-05-25T11:49:11.082Z] INFO: ::ffff:127.0.0.1 - - [25/May/2025:11:49:11 +0000] "HEAD / HTTP/1.1" 404 140 "http://localhost:5173/dashboard" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0"
+[2025-05-25T11:49:41.077Z] INFO: ::ffff:127.0.0.1 - - [25/May/2025:11:49:41 +0000] "HEAD / HTTP/1.1" 404 140 "http://localhost:5173/dashboard" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0"
+[2025-05-25T11:50:11.133Z] INFO: ::ffff:127.0.0.1 - - [25/May/2025:11:50:11 +0000] "HEAD / HTTP/1.1" 404 140 "http://localhost:5173/dashboard" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0"
+[2025-05-25T11:50:41.157Z] INFO: ::ffff:127.0.0.1 - - [25/May/2025:11:50:41 +0000] "HEAD / HTTP/1.1" 404 140 "http://localhost:5173/dashboard" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0"
+[2025-05-25T11:51:04.990Z] INFO: ::ffff:127.0.0.1 - - [25/May/2025:11:51:04 +0000] "HEAD / HTTP/1.1" 404 140 "http://localhost:5173/dashboard" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0"
+[2025-05-25T11:51:04.994Z] INFO: ::ffff:127.0.0.1 - - [25/May/2025:11:51:04 +0000] "HEAD / HTTP/1.1" 404 140 "http://localhost:5173/dashboard" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0"
+[2025-05-25T11:51:34.976Z] INFO: ::ffff:127.0.0.1 - - [25/May/2025:11:51:34 +0000] "HEAD / HTTP/1.1" 404 140 "http://localhost:5173/dashboard" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0"
+[2025-05-25T11:51:45.361Z] INFO: ::ffff:127.0.0.1 - - [25/May/2025:11:51:45 +0000] "HEAD / HTTP/1.1" 404 140 "http://localhost:5173/dashboard" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0"
+[2025-05-25T11:51:45.370Z] INFO: ::ffff:127.0.0.1 - - [25/May/2025:11:51:45 +0000] "HEAD / HTTP/1.1" 404 140 "http://localhost:5173/dashboard" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0"
+[2025-05-25T11:52:22.502Z] ERROR: 💥 Uncaught Exception
+[2025-05-25T11:55:23.877Z] INFO: 🚀 CourseCraft API running on http://localhost:5000
+[2025-05-25T11:55:23.878Z] INFO: 📚 Health check: http://localhost:5000/api/v1/health
+[2025-05-25T11:56:04.845Z] INFO: ::ffff:127.0.0.1 - - [25/May/2025:11:56:04 +0000] "HEAD / HTTP/1.1" 404 140 "http://localhost:5173/dashboard" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0"
+[2025-05-25T11:56:04.853Z] INFO: ::ffff:127.0.0.1 - - [25/May/2025:11:56:04 +0000] "HEAD / HTTP/1.1" 404 140 "http://localhost:5173/dashboard" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0"
+[2025-05-25T13:23:30.624Z] INFO: 🚀 CourseCraft API running on http://localhost:5000
+[2025-05-25T13:23:30.626Z] INFO: 📚 Health check: http://localhost:5000/api/v1/health
+[2025-05-25T13:33:33.734Z] INFO: ::ffff:127.0.0.1 - - [25/May/2025:13:33:33 +0000] "GET /v1/files/wkaw13a4ef.pdf HTTP/1.1" 404 162 "http://localhost:5173/dashboard" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0"
+[2025-05-25T13:33:48.955Z] INFO: ::ffff:127.0.0.1 - - [25/May/2025:13:33:48 +0000] "GET /v1/files/wkaw13a4ef.txt HTTP/1.1" 404 162 "http://localhost:5173/dashboard" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0"
+[2025-05-25T13:37:16.238Z] INFO: ::ffff:127.0.0.1 - - [25/May/2025:13:37:16 +0000] "GET /v1/files/l65u3r4nmc.pdf HTTP/1.1" 404 162 "http://localhost:5173/dashboard" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0"
+[2025-05-25T13:37:21.995Z] INFO: ::ffff:127.0.0.1 - - [25/May/2025:13:37:21 +0000] "GET /v1/files/l65u3r4nmc.txt HTTP/1.1" 404 162 "http://localhost:5173/dashboard" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0"
+[2025-05-25T13:50:53.167Z] INFO: 🚀 CourseCraft API running on http://localhost:5000
+[2025-05-25T13:50:53.171Z] INFO: 📚 Health check: http://localhost:5000/api/v1/health
+[2025-05-25T14:07:40.666Z] INFO: ::ffff:127.0.0.1 - - [25/May/2025:14:07:40 +0000] "POST /v1/auth/register HTTP/1.1" 404 156 "http://localhost:5173/signup" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0"
+[2025-05-25T14:07:58.371Z] INFO: ::ffff:127.0.0.1 - - [25/May/2025:14:07:58 +0000] "POST /v1/auth/register HTTP/1.1" 404 156 "http://localhost:5173/signup" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0"
+[2025-05-25T14:09:35.732Z] INFO: ::ffff:127.0.0.1 - - [25/May/2025:14:09:35 +0000] "POST /v1/auth/register HTTP/1.1" 404 156 "http://localhost:5173/signup" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0"
+[2025-05-25T14:10:01.852Z] INFO: ::ffff:127.0.0.1 - - [25/May/2025:14:10:01 +0000] "POST /v1/auth/login HTTP/1.1" 404 153 "http://localhost:5173/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0"
+[2025-05-25T14:10:09.991Z] INFO: ::ffff:127.0.0.1 - - [25/May/2025:14:10:09 +0000] "POST /v1/auth/register HTTP/1.1" 404 156 "http://localhost:5173/signup" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0"
+[2025-05-25T14:10:37.471Z] INFO: 👋 SIGTERM received.
+[2025-05-25T14:10:37.472Z] INFO: 💥 Process terminated.
+[2025-05-25T14:10:44.500Z] INFO: 🚀 CourseCraft API running on http://localhost:5000
+[2025-05-25T14:10:44.502Z] INFO: 📚 Health check: http://localhost:5000/api/v1/health
+[2025-05-25T14:11:06.801Z] INFO: ::ffff:127.0.0.1 - - [25/May/2025:14:11:06 +0000] "POST /v1/auth/login HTTP/1.1" 404 153 "http://localhost:5173/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0"
+[2025-05-25T14:11:59.564Z] ERROR: 💥 Uncaught Exception
