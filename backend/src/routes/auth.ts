@@ -1,4 +1,4 @@
-import { Router, Request, Response, NextFunction } from 'express';
+import { NextFunction, Request, Response, Router } from 'express';
 import rateLimit from 'express-rate-limit';
 import winston from 'winston';
 // Import the auth instance from firebase config
@@ -36,9 +36,8 @@ export const requireEmailVerified = (req: Request, res: Response, next: NextFunc
 };
 
 // Import custom type declarations
-import path from 'path';
-import { fileURLToPath } from 'url';
 import { dirname } from 'path';
+import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -62,6 +61,7 @@ const router = Router();
 // Register new user
 router.post('/register', rateLimiter, async (req: Request, res: Response) => {
   const { name, email, password } = req.body;
+  console.log('Register request body:', req.body); // <--- Add this line
   if (!name || !email || !password) {
     return res.status(400).json({ error: 'Name, email, and password are required.' });
   }
@@ -268,6 +268,50 @@ router.post('/refresh-token', rateLimiter, async (req: Request, res: Response) =
   } catch (error: unknown) {
     logger.error('Error refreshing token', { error });
     res.status(500).json({ error: 'Failed to refresh token' });
+  }
+});
+
+// Login user
+router.post('/login', rateLimiter, async (req: Request, res: Response) => {
+  const { email, password } = req.body;
+  if (!email || !password) {
+    console.log('Login request body:', res.json());
+    return res.status(400).json({ error: 'Email and password are required.' });
+  }
+  try {
+    // Use Firebase Auth REST API to sign in
+    const apiKey = process.env.FIREBASE_API_KEY;
+    if (!apiKey) {
+      return res.status(500).json({ error: 'Server misconfiguration: missing Firebase API key.' });
+    }
+    const response = await fetch(`https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${apiKey}`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password, returnSecureToken: true })
+      }
+    );
+    const data = await response.json();
+    if (data.error) {
+      console.error('Firebase login error:', data.error); // <-- Add this line
+      let msg = 'Login failed.';
+      if (data.error.message === 'EMAIL_NOT_FOUND' || data.error.message === 'INVALID_PASSWORD') {
+        msg = 'Invalid email or password.';
+      } else if (data.error.message === 'USER_DISABLED') {
+        msg = 'User account is disabled.';
+      }
+      return res.status(401).json({ error: msg });
+    }
+    // Success: return idToken and refreshToken
+    res.status(200).json({
+      token: data.idToken,
+      refreshToken: data.refreshToken,
+      email: data.email,
+      expiresIn: data.expiresIn
+    });
+  } catch (error: any) {
+    logger.error('Login failed', { error });
+    res.status(500).json({ error: 'Login failed.' });
   }
 });
 

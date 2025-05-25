@@ -1,7 +1,7 @@
 import { auth as firebaseAuth } from 'firebase-admin';
-import { auth as firebaseAdmin, getFirebaseApp } from '../config/firebase';
+import { auth as firebaseAdmin, getFirebaseApp } from '../config/firebase.js';
 import { Router } from 'express';
-import authRoutes from '../routes/auth';
+import authRoutes from '../routes/auth.js';
 
 /**
  * Initialize Firebase Admin and set up authentication routes

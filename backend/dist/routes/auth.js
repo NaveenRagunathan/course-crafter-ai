@@ -28,8 +28,9 @@ export const requireEmailVerified = (req, res, next) => {
     }
     next();
 };
-import { fileURLToPath } from 'url';
+// Import custom type declarations
 import { dirname } from 'path';
+import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const router = Router();
@@ -243,6 +244,47 @@ router.post('/refresh-token', rateLimiter, async (req, res) => {
     catch (error) {
         logger.error('Error refreshing token', { error });
         res.status(500).json({ error: 'Failed to refresh token' });
+    }
+});
+// Login user
+router.post('/login', rateLimiter, async (req, res) => {
+    const { email, password } = req.body;
+    if (!email || !password) {
+        return res.status(400).json({ error: 'Email and password are required.' });
+    }
+    try {
+        // Use Firebase Auth REST API to sign in
+        const apiKey = process.env.FIREBASE_API_KEY;
+        if (!apiKey) {
+            return res.status(500).json({ error: 'Server misconfiguration: missing Firebase API key.' });
+        }
+        const response = await fetch(`https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${apiKey}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, password, returnSecureToken: true })
+        });
+        const data = await response.json();
+        if (data.error) {
+            let msg = 'Login failed.';
+            if (data.error.message === 'EMAIL_NOT_FOUND' || data.error.message === 'INVALID_PASSWORD') {
+                msg = 'Invalid email or password.';
+            }
+            else if (data.error.message === 'USER_DISABLED') {
+                msg = 'User account is disabled.';
+            }
+            return res.status(401).json({ error: msg });
+        }
+        // Success: return idToken and refreshToken
+        res.status(200).json({
+            token: data.idToken,
+            refreshToken: data.refreshToken,
+            email: data.email,
+            expiresIn: data.expiresIn
+        });
+    }
+    catch (error) {
+        logger.error('Login failed', { error });
+        res.status(500).json({ error: 'Login failed.' });
     }
 });
 export default router;

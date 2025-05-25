@@ -1,4 +1,4 @@
-import axios, { AxiosError, AxiosInstance, InternalAxiosRequestConfig, AxiosResponse } from 'axios';
+import axios, { AxiosError, AxiosInstance, AxiosResponse, InternalAxiosRequestConfig } from 'axios';
 import { toast } from 'react-hot-toast';
 
 // Use environment variable or default to proxy path
@@ -121,16 +121,27 @@ export interface ApiResponse<T = any> {
 // Auth API
 export const authApi = {
   // Register a new user
-  register: (name: string, email: string, password: string) =>
-    handleResponse<ApiResponse<{ token: string; user: any }>>(
-      api.post('/auth/register', { name, email, password })
-    ),
+  register: async (name: string, email: string, password: string) => {
+    const response = await api.post('/auth/register', { name, email, password });
+    // If backend returns a token, store it
+    if (response.data.token) {
+      localStorage.setItem('token', response.data.token);
+    }
+    return response.data;
+  },
   
   // Login user
-  login: (email: string, password: string) =>
-    handleResponse<ApiResponse<{ token: string; user: any }>>(
-      api.post('/auth/login', { email, password })
-    ),
+  login: async (email: string, password: string) => {
+    const response = await api.post('/auth/login', { email, password });
+    const { token, refreshToken } = response.data;
+    if (token) {
+      localStorage.setItem('token', token);
+    }
+    if (refreshToken) {
+      localStorage.setItem('refreshToken', refreshToken);
+    }
+    return response.data;
+  },
   
   // Login with Google
   googleLogin: (token: string) =>
