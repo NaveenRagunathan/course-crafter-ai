@@ -61,26 +61,55 @@ const router = Router();
 // Register new user
 router.post('/register', rateLimiter, async (req: Request, res: Response) => {
   const { name, email, password } = req.body;
-  console.log('Register request body:', req.body); // <--- Add this line
+  console.log('Register request body:', req.body);
   if (!name || !email || !password) {
     return res.status(400).json({ error: 'Name, email, and password are required.' });
   }
   try {
-    // Create user in Firebase Auth
+    // 1. Create user in Firebase Auth
     const userRecord = await firebaseAuth.createUser({
       displayName: name,
       email,
       password,
       emailVerified: false
     });
-    // Send verification email
-    try {
-      await firebaseAuth.generateEmailVerificationLink(email);
-    } catch (err) {
-      logger.warn('User created but failed to send verification email', { email, error: err });
+
+    // 2. Login the user right after registration (get idToken & refreshToken)
+    // Use Firebase Auth REST API
+    const apiKey = process.env.FIREBASE_API_KEY;
+    if (!apiKey) {
+      return res.status(500).json({ error: 'Server misconfiguration: missing Firebase API key.' });
     }
-    logger.info('User registered', { uid: userRecord.uid, email });
-    res.status(201).json({ message: 'User registered. Please verify your email.' });
+    const loginResponse = await fetch(`https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${apiKey}`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password, returnSecureToken: true })
+      }
+    );
+    const loginData = await loginResponse.json();
+    if (!loginData.idToken) {
+      logger.error('Auto-login after registration failed', { loginData });
+      return res.status(500).json({ error: 'Registration succeeded but auto-login failed.' });
+    }
+
+    // 3. Send verification email in the background (don't await)
+    (async () => {
+      try {
+        await firebaseAuth.generateEmailVerificationLink(email);
+      } catch (err) {
+        logger.warn('User created but failed to send verification email', { email, error: err });
+      }
+    })();
+
+    logger.info('User registered and auto-logged in', { uid: userRecord.uid, email });
+    res.status(201).json({
+      message: 'User registered. Please verify your email.',
+      token: loginData.idToken,
+      refreshToken: loginData.refreshToken,
+      email: loginData.email,
+      expiresIn: loginData.expiresIn
+    });
   } catch (error: any) {
     logger.error('Registration failed', { error });
     let msg = 'Registration failed.';

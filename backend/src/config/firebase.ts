@@ -14,9 +14,11 @@ const initializeFirebase = (): admin.app.App => {
   }
 
   try {
-    // Path to the service account key file
-    const serviceAccountPath = path.join(__dirname, '../../config/firebase-service-account.json');
-    
+    // Use GOOGLE_APPLICATION_CREDENTIALS if set, otherwise default to local path
+    const serviceAccountPath =
+      process.env.GOOGLE_APPLICATION_CREDENTIALS ||
+      path.join(__dirname, '../../config/firebase-service-account.json');
+
     if (!fs.existsSync(serviceAccountPath)) {
       throw new Error('Firebase service account key file not found');
     }
