@@ -8,10 +8,10 @@ import authRoutes from '../routes/auth.js';
  * @returns Express Router with authentication routes
  */
 export const initializeFirebaseAuth = (): Router => {
-  if (!firebaseAdmin) {
+  // Use getFirebaseApp to check initialization
+  if (!getFirebaseApp()) {
     throw new Error('Firebase Admin SDK not initialized');
   }
-  
   console.log('Firebase Auth initialized successfully');
   return authRoutes;
 };
@@ -22,13 +22,16 @@ export const initializeFirebaseAuth = (): Router => {
  * @throws Error if Firebase Admin is not initialized
  */
 export const getAuth = (): firebaseAuth.Auth => {
-  if (!firebaseAdmin) {
+  // Use getFirebaseApp to check initialization
+  if (!getFirebaseApp()) {
     throw new Error('Firebase Admin SDK not initialized');
   }
   return firebaseAdmin;
 };
 
-export default {
+const firebaseUtils = {
   initializeFirebaseAuth,
   getAuth,
 };
+
+export default firebaseUtils;
